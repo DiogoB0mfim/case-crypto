@@ -1,0 +1,1 @@
+export const API_KEY = "x-cg-demo-api-key: CG-oKSEcsyiqcewhCr9Az1YWHof"
