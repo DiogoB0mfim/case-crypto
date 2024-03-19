@@ -1,1 +1,1 @@
-export const API_KEY = "x-cg-demo-api-key: CG-oKSEcsyiqcewhCr9Az1YWHof"
+export const API_KEY = "&x_cg_demo_api_key=CG-oKSEcsyiqcewhCr9Az1YWHof"

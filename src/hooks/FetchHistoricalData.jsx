@@ -3,7 +3,7 @@ import axios from 'axios';
 import { API_KEY } from "../constants/ApiKey";
 
 const FetchHistoricalData = (url) => {
-    const [historicalData, setHistoricalData] = useState(null);
+    const [historicalData, setHistoricalData] = useState();
 
     useEffect(() => {
         const fetchHistoricalData = async () => {
