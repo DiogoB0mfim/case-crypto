@@ -3,6 +3,8 @@ import FetchApiData from '../hooks/FetchApiData';
 import { BASE_URL } from '../constants/Url'
 import { API_KEY } from '../constants/ApiKey';
 import Header from '../components/Header';
+import * as S from '../styles/HomeStyled';
+
 
 const Home = () => {
     const navigate = useNavigate();
@@ -10,19 +12,27 @@ const Home = () => {
     
     const mapData = data && data.slice(0, 10).map((crypto, index) => {
         return (
-            <div key={index} onClick={() => navigate(`/crypto-detal/${crypto.id}`)}>
-                <p>{crypto.name}</p>
-                <p>{crypto.symbol}</p>
-                <p>{crypto.current_price}</p>
-                <p>{crypto.price_change_percentage_24h}</p>
-                <img src={crypto.image} alt="icone da crypto" />
-            </div>)
+            <S.Card key={index}>
+                <S.DivSymbolVar>
+                    <S.ImgSymbol src={crypto.image} alt="icone da crypto" />
+                </S.DivSymbolVar>
+                <S.DivInfos>
+                    <S.Pinfos>{crypto.name} <b>({crypto.symbol.toUpperCase()})</b></S.Pinfos>
+                    <S.Pinfos>{crypto.current_price.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' })}</S.Pinfos>
+                </S.DivInfos>
+                    <S.BtnDetails onClick={() => navigate(`/crypto-detal/${crypto.id}`)}>Detalhes</S.BtnDetails>
+                
+            </S.Card>)
     })
 
     return (
         <div>
             <Header/>
-            <h1>{mapData}</h1>
+            <S.Container>
+                <S.SP>
+                    {mapData}
+                </S.SP>
+            </S.Container>
         </div>
     );
 }

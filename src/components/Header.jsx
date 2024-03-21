@@ -30,7 +30,7 @@ const Header = () => {
                 <img src={logo} alt="logo cryptoplus" />
                 <S.DivBalance>
                     US$ {showBalance === true ? balance : <img src={stripBalance} alt="tarja de saldo" />}
-                    <img onClick={() => setShowBalance(!showBalance)} src={showBalance === false ? eyeOpen : eyeClosed} alt="ícone olho fechado" />
+                    <S.ImgEye onClick={() => setShowBalance(!showBalance)} src={showBalance === false ? eyeOpen : eyeClosed} alt="ícone olho fechado" />
                 </S.DivBalance>
             </S.Container>
         </>
