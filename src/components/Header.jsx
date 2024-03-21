@@ -5,8 +5,11 @@ import eyeClosed from "../assets/eye-closed.png";
 import eyeOpen from "../assets/eye-open.png";
 import stripBalance from "../assets/strip-balance.png";
 import * as S from "../styles/HeaderStyled";
+import formatToUsd from "../hooks/FormatToUsd";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+    const navigate = useNavigate();
     const [showBalance, setShowBalance] = useState(false)
     useEffect(() => { checkBalance(); }, [])
 
@@ -24,12 +27,13 @@ const Header = () => {
             setMessage(err.message)
         }
     }
+
     return (
         <>
             <S.Container>
-                <img src={logo} alt="logo cryptoplus" />
+                <S.ImgLogo onClick={() => navigate("/")} src={logo} alt="logo cryptoplus" />
                 <S.DivBalance>
-                    US$ {showBalance === true ? balance : <img src={stripBalance} alt="tarja de saldo" />}
+                    {showBalance === true ? formatToUsd(parseInt(balance)) : <img src={stripBalance} alt="tarja de saldo" />}
                     <S.ImgEye onClick={() => setShowBalance(!showBalance)} src={showBalance === false ? eyeOpen : eyeClosed} alt="ícone olho fechado" />
                 </S.DivBalance>
             </S.Container>

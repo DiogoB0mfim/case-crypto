@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
+import Error from "../pages/Error";
 import CryptoDetail from "../pages/CryptoDetail";
 
 const Router = () => {

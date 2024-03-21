@@ -29,3 +29,6 @@ export const ImgEye = styled.img`
     cursor: pointer;
 `
 
+export const ImgLogo = styled.img`
+    cursor: pointer;
+`

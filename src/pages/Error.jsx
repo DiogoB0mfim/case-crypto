@@ -1,9 +1,22 @@
+import iconLontraError from "../assets/icon-lontra-error.png"
+import * as S from "../styles/ErrorStyled"
+import logo from "../assets/logo-cp.png";
+import { useNavigate } from "react-router-dom";
+
 const Error = () => {
-	return(
+	const navigate = useNavigate();
+	return (
 		<>
-			<h1>Error<h1/>
+			<S.HeaderError>
+				<S.ImgLogo onClick={() => navigate("/")} src={logo} alt="logo" />
+			</S.HeaderError>
+			<S.Container>
+				<S.H1Error>OPS! NÃO ENCONTRAMOS ESSA PÁGINA {":("}</S.H1Error>
+				<S.ImgError src={iconLontraError} alt="imagem de lontra da página de error" />
+			</S.Container>
+			<S.PError>ERROR 404.</S.PError>
 		</>
-		);
+	)
 }
 
 export default Error;

@@ -4,7 +4,7 @@ import { BASE_URL } from '../constants/Url'
 import { API_KEY } from '../constants/ApiKey';
 import Header from '../components/Header';
 import * as S from '../styles/HomeStyled';
-
+import formatToUsd from '../hooks/FormatToUsd';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -18,10 +18,9 @@ const Home = () => {
                 </S.DivSymbolVar>
                 <S.DivInfos>
                     <S.Pinfos>{crypto.name} <b>({crypto.symbol.toUpperCase()})</b></S.Pinfos>
-                    <S.Pinfos>{crypto.current_price.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' })}</S.Pinfos>
+                    <S.Pinfos>{formatToUsd(crypto.current_price)}</S.Pinfos>
                 </S.DivInfos>
                     <S.BtnDetails onClick={() => navigate(`/crypto-detal/${crypto.id}`)}>Detalhes</S.BtnDetails>
-                
             </S.Card>)
     })
 
@@ -29,9 +28,9 @@ const Home = () => {
         <div>
             <Header/>
             <S.Container>
-                <S.SP>
+                <S.CardContainer>
                     {mapData}
-                </S.SP>
+                </S.CardContainer>
             </S.Container>
         </div>
     );

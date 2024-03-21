@@ -1,31 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    
    height: 88vh;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   
-
-   
-   
-  
-   
-   
-    
-   
-
-
 `
 
-export const SP = styled.div`
+export const CardContainer = styled.div`
     display: grid;
     width: 100%;
     grid-template-columns: repeat(5, 1fr); /* 3 columns */
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
    
    @media(max-width: 1280px){
@@ -37,31 +25,20 @@ export const SP = styled.div`
    }
 
     @media(max-width: 768px){
-    grid-template-columns: repeat(1, 1fr);
-    }
-    
+     grid-template-columns: repeat(1, 1fr);
+    } 
 `
-
-
 
 export const Card = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e4e4e4;
+    background-color: #ececec;
     padding: 1rem;
     border-radius: 5px;
     height: 350px;
-    gap: 1rem;
-
-    @media(max-width: 768px){
-        
-    }
-    
-    
-    
-    
+    gap: 1rem; 
 `
 
 export const DivSymbolVar = styled.div`
@@ -69,15 +46,19 @@ export const DivSymbolVar = styled.div`
     width: 100%;
     align-items: center;
     justify-content: center;
-    
     gap: 2rem;
-
 `
 
 export const ImgSymbol = styled.img`
     margin-top: 20px;
     width: 130px;
     height: 130px;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        filter: grayscale(100%);
+    }
 `
 
 export const DivInfos = styled.div`
@@ -85,7 +66,6 @@ export const DivInfos = styled.div`
     flex-direction: column;
     justify-content: end;
     height: 100%;
-    
 `
 
 export const Pinfos = styled.p`
@@ -103,5 +83,9 @@ export const BtnDetails = styled.button`
     color: #ffff;
     font-size: 20px;
     cursor: pointer;
+    transition: 1s;
 
+    &:hover{
+        background-color: #1d1f58;
+    }
 `
