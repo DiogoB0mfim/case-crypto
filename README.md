@@ -7,7 +7,7 @@
 <br/>
 
 > ⚙ Tecnologias utlizadas
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<img src="ttps://i.imgur.com/kR8ZfT7.png"/>
 <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"/>
 <img src="https://i.imgur.com/tbWvxRj.png"/>
 <br/>
