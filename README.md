@@ -1,8 +1,19 @@
-# React + Vite
+<br/>
+<p align="center">
+ <a href="https://imgur.com/B7Jz4fV"><img src="https://i.imgur.com/B7Jz4fV.png" title="source: imgur.com" /></a>
+<p/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center"> 🖼 Front-end</h1>
+<br/>
 
-Currently, two official plugins are available:
+> ⚙ Tecnologias utlizadas
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"/>
+<img src="https://i.imgur.com/tbWvxRj.png"/>
+<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 🖥 Imagens 
+
+<a href="https://imgur.com/XsPzUJJ"><img src="https://i.imgur.com/XsPzUJJ.png" title="source: imgur.com" /></a>
+<br/>
+<br/>
